@@ -37,15 +37,26 @@
             <field name="arch" type="xml">
                 <form string="create new record">
                     <group  string="identity">
-                        <field name="name"/>
-                        <separator colspan="2"/>
-                        <field name="start_date"/>
-                        <field name="duration"/>
-                        <separator colspan="2"/>
-                        <field name="nbr_oS"/>
-                        <field name="rel_courses"/>
-                        <field name="instructor"/>
-                        <separator colspan="2"/>
+                        <notebook colspan="2">
+                            <page string="Records">
+                                <field name="name"/>
+                                <separator colspan="2"/>
+                                <field name="start_date"/>
+                                <field name="duration"/>
+                                <separator colspan="2"/>
+                                <field name="nbr_oS"/>
+                                <field name="rel_courses"/>
+                                <field name="instructor"/>
+                                <separator colspan="2"/>
+                            </page>
+                            <page string="Attendies">
+                                <group>
+                                    <field name="attendees"   />
+
+                                </group>
+
+                            </page>
+                        </notebook>
                     </group>
 
 

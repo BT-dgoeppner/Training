@@ -11,8 +11,8 @@ class Sessions(models.Model):
     rel_courses = fields.Many2one(comodel_name="openacademy.course", string='Related courses', required='true')
     instructor = fields.Many2one(comodel_name="res.partner", string="Related Instructor", required='true')
 
-    course_id = fields.Many2one(comodel_name='course', ondelete="set null", string="Related course:", required="True")
-    instructor_id = fields.Many2one(comodel_name='res.partner', ondelete="set null", string="Instructor:")
-    responsible_id = fields.Many2one(comodel_name='res.users', ondelete="set null", string="Responsible:")
+    course_id = fields.Many2one(comodel_name="course", ondelete="set null", string="Related course:", required="true")
 
-    attendees = fields.Many2many(comodel_name="res.partner", relation="session_attendees", column1="session_id", column2="attendee_id")
+    attendees = fields.Many2many(comodel_name="res.partner", relation="session_attendees", column1="session_id",
+                                 column2="attendee_id")
+

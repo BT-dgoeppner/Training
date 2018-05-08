@@ -47,6 +47,13 @@
                                 </group>
 
                             </page>
+                            <page string="Related sessions">
+                                <group>
+                                    <field name="sessions"   />
+
+                                </group>
+
+                            </page>
                         </notebook>
                     </group>
                 </form>
