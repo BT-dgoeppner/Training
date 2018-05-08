@@ -1,0 +1,14 @@
+<!-- here we are creating entries in the database for demo
+ creating a database with the ability to show demo recors can't be rexcursive
+ in the production mode we create the database without demos
+ the settings are in the config files
+ -->
+<odoo>
+    <data noupdate="true">
+        <record model="openacademy.course" id="course_demo"> <!-- always put the name of the class-->
+            <field name="title">test titel</field> <!-- put records in the database-->
+            <field name="date">1986-11-27</field>
+            <field name="description">here is the description</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,56 @@
+<odoo>
+   <data>
+       <record model="ir.ui.view" id="view_courses_tree">
+           <field name="name">View all records</field>
+           <field name="model">openacademy.course</field>
+           <field name="priority" eval="1"/>
+           <field name="arch" type="xml">
+                 <tree string="View list">
+                     <field name="title"/>
+                     <field name="responsible"  />
+                     <field name="date"/>
+                </tree>
+           </field>
+       </record>
+       <record model="ir.ui.view" id="view_courses_search">
+           <field name="name">View all records</field>
+           <field name="model">openacademy.course</field>
+           <field name="priority" eval="1"/>
+           <field name="arch" type="xml">
+                <search>
+                    <field name="title"/>
+                    <field name="responsible"  />
+                    <field name="date"/>
+                </search>
+           </field>
+       </record>
+       <record model="ir.ui.view" id="view_courses_form">
+            <field name="name">View all records</field>
+            <field name="model">openacademy.course</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="create new record">
+                    <group>
+
+                        <notebook colspan="2">
+                            <page string="Records">
+                                <group  string="identity">
+                                    <field name="title"   /><!--nolabel="1" will not display label -->
+                                    <separator colspan="2"/>
+                                    <field name="responsible"  />
+                                    <field name="date"  />
+                                </group>
+                            </page>
+                            <page string="Description">
+                                <group>
+                                     <field name="description"   />
+                                </group>
+
+                            </page>
+                        </notebook>
+                    </group>
+                </form>
+            </field>
+        </record>
+   </data>
+</odoo>

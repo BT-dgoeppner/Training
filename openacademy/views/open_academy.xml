@@ -1,0 +1,36 @@
+<odoo>
+   <data>
+        <record model="ir.actions.act_window" id="subject"> <!-- seulement le id change -->
+            <field name="name">Courses</field> <!-- name of the module at the page-->
+            <field name="res_model">openacademy.course</field> <!-- doit avoir le meme nom du model declaré dans la class (models/xxxx.py) -->
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Help</p>
+            </field>
+        </record>
+
+       <record model="ir.actions.act_window" id="session"> <!-- seulement le id change -->
+            <field name="name">Sessions</field> <!-- name of the module at the page-->
+            <field name="res_model">openacademy.sessions</field> <!-- doit avoir le meme nom du model declaré dans la class (models/xxxx.py) -->
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Help</p>
+            </field>
+        </record>
+
+        <menuitem id="menu_openacademy_new" name="Open Academy" sequence="1"  />
+
+
+       <!--
+       <menuitem id="menu_openacademy_db" parent="menu_openacademy_new" name="menulabel test" sequence="1"   />
+       <menuitem id="menu_openacademy_db_view1" parent="menu_openacademy_db" name="menulabel 1" sequence="2" action="subject"   />
+        <menuitem id="menu_openacademy_db_view2" parent="menu_openacademy_db" name="menulabel 2" sequence="2" action="subject"   /> -->  <!-- l'action est relie a l'id du record> -->
+
+        <menuitem id="menu_openacademy_action" parent="menu_openacademy_new" name="Action" sequence="1"   />
+        <menuitem id="menu_openacademy_courses" parent="menu_openacademy_action" name="Courses" sequence="2" action="subject"   />
+        <menuitem id="menu_openacademy_session_db_2" parent="menu_openacademy_action" name="sessions" sequence="2" action="session"   />  <!-- l'action est relie a l'id du record> -->
+
+       <menuitem id="menu_openacademy_configuration" parent="menu_openacademy_new" name="Configuration" sequence="1"   />
+       <menuitem id="menu_openacademy_conf1" parent="menu_openacademy_configuration" name="Settings" sequence="2" action="subject"   />
+   </data>
+</odoo>

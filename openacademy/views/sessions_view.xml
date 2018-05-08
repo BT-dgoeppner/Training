@@ -1,0 +1,56 @@
+<odoo>
+   <data>
+       <record model="ir.ui.view" id="view_sessions_tree">
+           <field name="name">View all sessions</field>
+           <field name="model">openacademy.sessions</field>
+           <field name="priority" eval="1"/>
+           <field name="arch" type="xml">
+                 <tree string="View list">
+                     <field name="name"/>
+                     <field name="start_date"/>
+                     <field name="duration"/>
+                     <field name="nbr_oS"/>
+                     <field name="rel_courses"/>
+                     <field name="instructor"/>
+                </tree>
+           </field>
+       </record>
+       <record model="ir.ui.view" id="view_sessions_search">
+           <field name="name">Search sessions</field>
+           <field name="model">openacademy.sessions</field>
+           <field name="priority" eval="1"/>
+           <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                     <field name="start_date"/>
+                     <field name="duration"/>
+                     <field name="nbr_oS"/>
+                     <field name="rel_courses"/>
+                     <field name="instructor"/>
+                </search>
+           </field>
+       </record>
+       <record model="ir.ui.view" id="view_sessions_form">
+            <field name="name">Create Session</field>
+            <field name="model">openacademy.sessions</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="create new record">
+                    <group  string="identity">
+                        <field name="name"/>
+                        <separator colspan="2"/>
+                        <field name="start_date"/>
+                        <field name="duration"/>
+                        <separator colspan="2"/>
+                        <field name="nbr_oS"/>
+                        <field name="rel_courses"/>
+                        <field name="instructor"/>
+                        <separator colspan="2"/>
+                    </group>
+
+
+                </form>
+            </field>
+        </record>
+   </data>
+</odoo>
